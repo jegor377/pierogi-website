@@ -1,0 +1,317 @@
+:root {
+	--header-font-size: 72px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+
+	width: 100%;
+	height: 100vh;
+	background-image: url('../imgs/pierogi.jpg');
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+header nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	/*padding: 4px 20px 8px 20px;*/
+	background-color: #ffffffe6;
+	box-shadow: 0px 10px 50px #555;
+}
+
+.nav-brand {
+	font-family: 'Pacifico', cursive;
+	text-decoration: none;
+	color: #222;
+	font-size: 40px;
+	margin: 10px 30px;
+}
+
+.nav-links {
+	list-style: none;
+	height: 100%;
+	font-size: 0; /* For some reason removes margin between elements. */
+}
+
+.nav-links li {
+	display: inline-block;
+	height: 100%;
+	margin: none;
+}
+
+.nav-links li a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #707070;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-decoration: none;
+	text-transform: uppercase;
+	height: 100%;
+	padding: 0 20px;
+	margin: none;
+	background-color: rgba(0.4, 0.4, 0.4, 0);
+	transition: background-color 0.2s;
+}
+
+.nav-links li a:hover {
+	background-color: rgba(0.4, 0.4, 0.4, 0.1);
+}
+
+.invitation-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	text-align: center;
+}
+
+.invitation-box h2 {
+	font-size: 54px;
+	color: white;
+	text-shadow: 0 0 10px #000;
+	-moz-text-shadow: 0 0 10px #000;
+	-webkit-text-shadow: 0 0 10px #000;
+	text-transform: uppercase;
+}
+
+.invitation-box hr {
+	width: 340px;
+	color: white;
+	border: 1px solid white;
+}
+
+.order-btn {
+	position: relative;
+	text-decoration: none;
+	color: #eee;
+	font-size: 24px;
+	margin-top: 50px;
+	padding: 20px 60px;
+	border: 2px solid #eee;
+	text-transform: uppercase;
+	background-color: #55555580;
+	transition: background-color 0.2s ease-out;
+}
+
+.order-btn:hover {
+	background-color: white;
+	color: black;
+}
+
+.order-btn span {
+	display: block;
+	position: relative;
+	transition: transform 0.2s ease-out;
+}
+
+.order-btn:hover span {
+	animation-name: bump;
+	animation-duration: 0.4s;
+}
+
+.container {
+	padding: 50px 100px;
+}
+
+#about {
+	text-align: justify;
+	overflow: hidden;
+	position: relative;
+}
+
+#about-back {
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#about-back img {
+	position: absolute;
+	display: block;
+	bottom: -150px;
+	animation: dumpling 30s linear infinite, fade 30s linear infinite;
+}
+
+#about-back img:nth-child(1) {
+	left: 86%;
+	width: 100px;
+	height: 100px;
+	animation-delay: 0.2s;
+}
+
+#about-back img:nth-child(2) {
+	left: 12%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 1.5s;
+	animation-duration: 10s;
+}
+
+#about-back img:nth-child(3) {
+	left: 70%;
+	width: 150px;
+	height: 150px;
+	animation-delay: 8.5s;
+}
+
+#about-back img:nth-child(4) {
+	left: 44%;
+	width: 90px;
+	height: 90px;
+	animation-delay: 0s;
+	animation-duration: 20s;
+}
+
+#about-back img:nth-child(5) {
+	left: 30%;
+	width: 130px;
+	height: 130px;
+	animation-delay: 2s;
+}
+
+#about-back img:nth-child(6) {
+	left: 62%;
+	width: 110px;
+	height: 110px;
+	animation-delay: 15s;
+}
+
+#about-front {
+	z-index: 1;
+}
+
+#about-front h2 {
+	font-family: 'Pacifico', cursive;
+	font-size: var(--header-font-size);
+	line-height: 10px;
+}
+
+#about-front h3 {
+	font-family: 'Pacifico', cursive;
+	font-size: 36px;
+	color: #222;
+}
+
+#about-front p {
+	color: #333;
+	width: 60%;
+	font-size: 20px;
+}
+
+#order {
+	position: relative;
+	display: block;
+	background-image: url('../imgs/pierogi4.jpg');
+	background-repeat:no-repeat;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-position:center;
+}
+
+.background-tint {
+	position: absolute;
+	background-color: rgba(5, 5, 5, .3);
+	background-blend-mode: multiply;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+#order-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+#order-content * {
+	z-index: 2;
+}
+
+#order-content h2 {
+	font-family: 'Pacifico', cursive;
+	font-size: var(--header-font-size);
+	line-height: 10px;
+	grid-column: 2;
+	text-align: center;
+	color: white;
+}
+
+#contact {
+	background-color: #444;
+}
+
+#contact h2 {
+	font-family: 'Pacifico', cursive;
+	font-size: var(--header-font-size);
+	line-height: 10px;
+	grid-column: 2;
+	text-align: center;
+	color: white;
+}
+
+footer {
+	padding: 40px 0px;
+	text-align: center;
+	background-color: #333;
+	color: white;
+}
+
+@keyframes bump {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-7px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes dumpling {
+	from {
+		transform: translateY(0) rotate(0deg);
+	}
+	to {
+		transform: translateY(-800px) rotate(360deg);
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	85% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
