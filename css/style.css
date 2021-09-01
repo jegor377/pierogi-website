@@ -220,7 +220,7 @@ header nav {
 	font-size: 20px;
 }
 
-#order {
+#offer {
 	position: relative;
 	display: block;
 	background-image: url('../imgs/pierogi4.jpg');
@@ -241,18 +241,18 @@ header nav {
 	z-index: 1;
 }
 
-#order-content {
+#offer-content {
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 5fr 1fr;
+	grid-template-rows: 1fr 2fr;
 	color: white;
 }
 
-#order-content * {
+#offer-content * {
 	z-index: 2;
 }
 
-#order-content h2 {
+#offer-content h2 {
 	font-family: 'Pacifico', cursive;
 	font-size: var(--header-font-size);
 	line-height: 10px;
@@ -260,9 +260,26 @@ header nav {
 	text-align: center;
 }
 
-.order-btns {
+.offer-btns {
 	grid-column: 2;
 	grid-row: 2;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.offer-btn {
+	aspect-ratio: 16/9;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	padding: 10px;
+}
+
+.offer-btn h4 {
+	font-size: 20px;
+	text-align: center;
 }
 
 #contact {
