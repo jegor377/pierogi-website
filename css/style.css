@@ -32,7 +32,6 @@ header nav {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	/*padding: 4px 20px 8px 20px;*/
 	background-color: #ffffffe6;
 	box-shadow: 0px 10px 50px #555;
 }
@@ -90,9 +89,9 @@ header nav {
 .invitation-box h2 {
 	font-size: 54px;
 	color: white;
-	text-shadow: 0 0 10px #000;
-	-moz-text-shadow: 0 0 10px #000;
-	-webkit-text-shadow: 0 0 10px #000;
+	text-shadow: 0 0 20px #000;
+	-moz-text-shadow: 0 0 20px #000;
+	-webkit-text-shadow: 0 0 20px #000;
 	text-transform: uppercase;
 }
 
@@ -244,7 +243,9 @@ header nav {
 
 #order-content {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	color: white;
 }
 
 #order-content * {
@@ -257,11 +258,16 @@ header nav {
 	line-height: 10px;
 	grid-column: 2;
 	text-align: center;
-	color: white;
+}
+
+.order-btns {
+	grid-column: 2;
+	grid-row: 2;
 }
 
 #contact {
 	background-color: #444;
+	color: white;
 }
 
 #contact h2 {
@@ -270,7 +276,14 @@ header nav {
 	line-height: 10px;
 	grid-column: 2;
 	text-align: center;
-	color: white;
+}
+
+.contact-container {
+	padding: 50px 100px 0px 100px;
+}
+
+#contact iframe {
+	width: 100%;
 }
 
 footer {
