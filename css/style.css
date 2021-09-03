@@ -243,7 +243,9 @@ header nav {
 
 #offer {
 	position: relative;
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	background-image: url('../imgs/pierogi4.jpg');
 	background-repeat:no-repeat;
 	-webkit-background-size:cover;
@@ -251,17 +253,8 @@ header nav {
 	-o-background-size:cover;
 	background-size:cover;
 	background-position:center;
-}
-
-#offer {
-	display: grid;
-	grid-template-columns: 1fr 5fr 1fr;
-	grid-template-rows: 1fr 2fr;
 	color: white;
-}
-
-#offer * {
-	z-index: 2;
+	min-height: 100vh;
 }
 
 #offer h2 {
@@ -273,12 +266,14 @@ header nav {
 }
 
 .offer-btns {
+	margin: 100px 0px;
 	grid-column: 2;
 	grid-row: 2;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	width: 85%;
 }
 
 .offer-btn {
