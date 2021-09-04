@@ -2,6 +2,7 @@
 	--header-font-size: 72px;
 	--footer-color: #222;
 	--contact-shadow-spread: 25px;
+	--nav-link-anim-time: 0.4s;
 }
 
 html {
@@ -67,19 +68,20 @@ header nav {
 	margin: 10px 30px;
 }
 
-.nav-links {
+#nav-links {
 	list-style: none;
 	height: 100%;
 	font-size: 0; /* For some reason removes margin between elements. */
+	transition: visibility 0s, opacity var(--nav-link-anim-time);
 }
 
-.nav-links li {
+#nav-links li {
 	display: inline-block;
 	height: 100%;
 	margin: none;
 }
 
-.nav-links li a {
+#nav-links li a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -96,11 +98,19 @@ header nav {
 	transition: background-color 0.2s;
 }
 
-.nav-links li a:hover {
+#nav-links li a:hover {
 	background-color: rgba(0.4, 0.4, 0.4, 0.1);
 }
 
-#hamburger-menu {
+.nav-links-on-shown {
+	display: block;
+}
+
+.nav-links-on-hidden {
+	display: block;
+}
+
+#hamburger-menu-btn {
 	display: none;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -109,11 +119,11 @@ header nav {
 	margin: 5px 20px;
 }
 
-#hamburger-menu:hover {
+#hamburger-menu-btn:hover {
 	cursor: pointer;
 }
 
-#hamburger-menu div {
+#hamburger-menu-btn div {
 	background-color: black;
 	width: 100%;
 	height: 2px;
@@ -440,27 +450,38 @@ footer p {
 		font-size: 24px;
 	}
 
-	.nav-links {
-		position: absolute;
+	#nav-links {
+		position: fixed;
 		top: 0px;
 		right: 0px;
 		padding: 0;
-		width: 100%;
-		background-color: yellow;
+		width: 100vw;
+		height: 100vh;
+		background-color: #eee;
 		z-index: 2;
-		visibility: hidden;
+		transition: opacity 0.4s;
 	}
 
-	.nav-links li {
+	#nav-links li {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
-		margin: none;
+		margin: 0;
 		height: auto;
+		width: 100%;
 	}
 
-	.nav-links li a {
+	#nav-links li a {
+		justify-content: flex-start;
 		padding: 20px;
+		padding-left: 40px;
+		width: 100%;
+		text-align: left;
+		transition: padding-left 0.4s;
+	}
+
+	#nav-links li a:hover {
+		padding-left: 60px;
 	}
 
 	.invitation-box h2 {
@@ -472,7 +493,15 @@ footer p {
 		width: 50px;
 	}
 
-	#hamburger-menu {
+	.nav-links-on-shown {
+		display: block;
+	}
+
+	.nav-links-on-hidden {
+		display: none;
+	}
+
+	#hamburger-menu-btn {
 		display: flex;
 	}
 
