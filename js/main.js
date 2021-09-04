@@ -1,4 +1,4 @@
-var APP = function() {
+var App = function() {
 	const hamburger_menu_btn = document.getElementById("hamburger-menu-btn")
 	const nav_links = document.getElementById("nav-links")
 
@@ -38,6 +38,8 @@ var APP = function() {
 	}
 
 	function animate_showing_navigation_links() {
+		const animation_delay = 100;
+
 		for(let i = 0; i < nav_links.children.length; i++) {
 			let nav_link = nav_links.children[i];
 			nav_link.style.opacity = 0;
@@ -58,7 +60,7 @@ var APP = function() {
 				anim.onfinish = () => {
 					nav_link.style.opacity = 1;
 				}
-			}, (i + 1) * 100)
+			}, (i + 1) * animation_delay)
 		}
 	}
 
@@ -84,5 +86,5 @@ var APP = function() {
 	}
 }
 
-APP();
+App();
 AOS.init();
