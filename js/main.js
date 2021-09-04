@@ -18,6 +18,7 @@ var APP = function() {
 	})
 
 	function show_navigation() {
+		hamburger_menu_btn.classList.toggle("hamburger-menu-btn-toggled")
 		nav_links.classList.add("nav-links-on-shown")
 		nav_links.classList.remove("nav-links-on-hidden")
 		nav_links.animate([
@@ -62,6 +63,7 @@ var APP = function() {
 	}
 
 	function hide_navigation() {
+		hamburger_menu_btn.classList.toggle("hamburger-menu-btn-toggled")
 		let anim = nav_links.animate([
 			{
 				transform: 'translateY(0px)',
