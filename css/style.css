@@ -2,7 +2,6 @@
 	--header-font-size: 72px;
 	--footer-color: #222;
 	--contact-shadow-spread: 25px;
-	--nav-link-anim-time: 0.4s;
 }
 
 html {
@@ -70,14 +69,11 @@ header nav {
 
 #nav-links {
 	list-style: none;
-	height: 100%;
 	font-size: 0; /* For some reason removes margin between elements. */
-	transition: visibility 0s, opacity var(--nav-link-anim-time);
 }
 
 #nav-links li {
 	display: inline-block;
-	height: 100%;
 	margin: none;
 }
 
@@ -91,8 +87,7 @@ header nav {
 	letter-spacing: 2px;
 	text-decoration: none;
 	text-transform: uppercase;
-	height: 100%;
-	padding: 0 20px;
+	padding: 35px 20px;
 	margin: none;
 	background-color: rgba(0.4, 0.4, 0.4, 0);
 	transition: background-color 0.2s;

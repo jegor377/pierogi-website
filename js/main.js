@@ -3,11 +3,13 @@ var APP = function() {
 	const nav_links = document.getElementById("nav-links")
 
 	const navigation_anim_time = 300;
+	const small_screen_size = 930;
 
 	for(let i = 0; i < nav_links.children.length; i++) {
-		nav_links.children[i].style.animationDelay = (i + 1) * 100 + "ms"
 		nav_links.children[i].addEventListener("click", (event) => {
-			hide_navigation();
+			if(window.innerWidth <= small_screen_size) {
+				hide_navigation();
+			}
 		})
 	}
 
