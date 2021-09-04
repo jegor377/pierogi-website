@@ -1,6 +1,7 @@
 :root {
 	--header-font-size: 72px;
 	--footer-color: #222;
+	--contact-shadow-spread: 25px;
 }
 
 html {
@@ -39,7 +40,7 @@ header {
 	align-content: stretch;
 
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-image: url('../imgs/pierogi.jpg');
 	background-repeat:no-repeat;
 	-webkit-background-size:cover;
@@ -99,6 +100,25 @@ header nav {
 	background-color: rgba(0.4, 0.4, 0.4, 0.1);
 }
 
+#hamburger-menu {
+	display: none;
+	flex-direction: column;
+	justify-content: space-evenly;
+	min-width: 30px;
+	aspect-ratio: 1/1;
+	margin: 5px 20px;
+}
+
+#hamburger-menu:hover {
+	cursor: pointer;
+}
+
+#hamburger-menu div {
+	background-color: black;
+	width: 100%;
+	height: 2px;
+}
+
 .invitation-box {
 	display: flex;
 	flex-direction: column;
@@ -106,6 +126,7 @@ header nav {
 	align-items: center;
 	height: inherit;
 	text-align: center;
+	min-height: 90vh;
 }
 
 .invitation-box h2 {
@@ -118,7 +139,7 @@ header nav {
 }
 
 .invitation-box hr {
-	width: 340px;
+	width: 130px;
 	color: white;
 	border: 1px solid white;
 }
@@ -127,7 +148,7 @@ header nav {
 	position: relative;
 	text-decoration: none;
 	color: #eee;
-	font-size: 24px;
+	font-size: 22px;
 	margin-top: 50px;
 	padding: 20px 60px;
 	border: 2px solid #eee;
@@ -355,7 +376,6 @@ header nav {
 	background-size:cover;
 	background-position:center;
 	position: relative;
-	/*box-shadow: inset 10px 40px 90px -60px black;*/
 }
 
 .color-dimm {
@@ -386,21 +406,22 @@ header nav {
 
 .conact-information h3 {
 	font-size: 22px;
-	text-shadow: 0px 0px 2px black;
+	text-shadow: 0px 0px var(--contact-shadow-spread) black;
 }
 
 .conact-information p,
 .conact-information a {
 	font-size: 18px;
-	text-shadow: 0px 0px 2px black;
+	text-shadow: 0px 0px var(--contact-shadow-spread) black;
 }
 
 #contact iframe {
 	width: 100%;
+	height: 100%;
 }
 
 footer {
-	padding: 40px 0px;
+	padding: 20px 0px;
 	text-align: center;
 	background-color: var(--footer-color);
 	color: #eee;
@@ -408,6 +429,123 @@ footer {
 
 footer p {
 	font-size: 18px;
+}
+
+@media only screen and (max-width: 930px) {
+	:root {
+		--header-font-size: 54px;
+	}
+
+	.nav-brand {
+		font-size: 24px;
+	}
+
+	.nav-links {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		padding: 0;
+		width: 100%;
+		background-color: yellow;
+		z-index: 2;
+		visibility: hidden;
+	}
+
+	.nav-links li {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: none;
+		height: auto;
+	}
+
+	.nav-links li a {
+		padding: 20px;
+	}
+
+	.invitation-box h2 {
+		font-size: 30px;
+		padding: 15px 0px;
+	}
+
+	.invitation-box hr {
+		width: 50px;
+	}
+
+	#hamburger-menu {
+		display: flex;
+	}
+
+	.order-btn {
+		font-size: 18px;
+		margin-top: 25px;
+		padding: 10px 30px;
+	}
+
+	.container {
+		padding: 10px 20px;
+	}
+
+	#about {
+		min-height: 100vh;
+	}
+
+	#about-back img:nth-child(1) {
+		width: 80px;
+		height: 80px;
+	}
+
+	#about-back img:nth-child(2) {
+		width: 50px;
+		height: 50px;
+	}
+
+	#about-back img:nth-child(3) {
+		width: 100px;
+		height: 100px;
+	}
+
+	#about-back img:nth-child(4) {
+		width: 70px;
+		height: 70px;
+	}
+
+	#about-back img:nth-child(5) {
+		width: 90px;
+		height: 90px;
+	}
+
+	#about-back img:nth-child(6) {
+		width: 80px;
+		height: 80px;
+	}
+
+	#about-front h3 {
+		font-size: 30px;
+	}
+
+	#about-front p {
+		width: auto;
+		font-size: 18px;
+	}
+
+	#offer {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.offer-btns {
+		margin: 50px 0px;
+	}
+
+	.contact-content {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	footer p {
+		font-size: 14px;
+	}
 }
 
 @keyframes bump {
@@ -427,7 +565,7 @@ footer p {
 		transform: translateY(0) rotate(0deg);
 	}
 	to {
-		transform: translateY(-800px) rotate(360deg);
+		transform: translateY(-850px) rotate(360deg);
 	}
 }
 
