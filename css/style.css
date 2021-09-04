@@ -468,6 +468,7 @@ footer p {
 		background-color: #eee;
 		z-index: 2;
 		transition: opacity 0.4s;
+		overflow: scroll;
 	}
 
 	#nav-links li {
