@@ -1,6 +1,7 @@
-var App = function() {
+function App() {
 	const hamburger_menu_btn = document.getElementById("hamburger-menu-btn")
 	const nav_links = document.getElementById("nav-links")
+	const offer_btns = document.getElementsByClassName("offer-btn")
 
 	const navigation_anim_time = 300;
 	const small_screen_size = 930;
@@ -8,14 +9,21 @@ var App = function() {
 	for(let i = 0; i < nav_links.children.length; i++) {
 		nav_links.children[i].addEventListener("click", (event) => {
 			if(window.innerWidth <= small_screen_size) {
-				hide_navigation();
+				hide_navigation()
 			}
 		})
 	}
 
 	hamburger_menu_btn.addEventListener("click", (event) => {
-		show_navigation();
+		show_navigation()
 	})
+
+	for(let i = 0; i < offer_btns.length; i++) {
+		offer_btns[i].addEventListener("click", (event) => {
+			event.preventDefault()
+			offer_btns[i].classList.toggle("offer-btn-clicked")
+		})
+	}
 
 	function show_navigation() {
 		hamburger_menu_btn.classList.toggle("hamburger-menu-btn-toggled")
@@ -86,5 +94,5 @@ var App = function() {
 	}
 }
 
-App();
-AOS.init();
+App()
+AOS.init()
