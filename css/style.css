@@ -361,6 +361,7 @@ nav {
 	transition: opacity 0.4s;
 	border-radius: 10px;
 	overflow: hidden;
+	opacity: 0;
 }
 
 .flip-container {
@@ -384,7 +385,7 @@ nav {
 }
 
 .offer-btn-clicked > .offer-btn-back {
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 .flip-container:hover > .offer-btn > .offer-description {
