@@ -371,6 +371,10 @@ nav {
 	transform: rotateX(10deg);
 }
 
+.flip-container:focus > .offer-btn {
+	transform: rotateX(0deg);
+}
+
 .offer-btn-clicked {
 	transform: rotateX(180deg) !important;
 }
