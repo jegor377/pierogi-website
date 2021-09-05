@@ -327,7 +327,6 @@ nav {
 	box-shadow: 0px 0px 15px black;
 	text-decoration: none;
 	color: white;
-	transform-style: preserve-3d;
 	--order-btn-anim-time: 0.5s;
 	transition: var(--order-btn-anim-time) transform;
 	transform-style: preserve-3d;
@@ -341,7 +340,9 @@ nav {
 	background-size:cover;
 	background-position:center;
 	transform: rotateX(0deg);
-	backface-visibility: hidden;
+	transition: opacity 0.4s;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .offer-btn-back {
@@ -357,6 +358,9 @@ nav {
 	transform: rotateX(180deg);
 	background-color: #222;
 	color: #eee;
+	transition: opacity 0.4s;
+	border-radius: 10px;
+	overflow: hidden;
 }
 
 .flip-container {
@@ -369,6 +373,14 @@ nav {
 
 .offer-btn-clicked {
 	transform: rotateX(180deg) !important;
+}
+
+.offer-btn-clicked > .offer-btn-front {
+	opacity: 0;
+}
+
+.offer-btn-clicked > .offer-btn-back {
+	opacity: 1;
 }
 
 .flip-container:hover > .offer-btn > .offer-description {
