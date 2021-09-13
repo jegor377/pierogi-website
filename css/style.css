@@ -41,7 +41,7 @@ header {
 
 	width: 100%;
 	min-height: 100vh;
-	background-image: url('../imgs/pierogi.jpg');
+	background-image: url('../imgs/pierogi.webp');
 	background-repeat:no-repeat;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -289,7 +289,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-image: url('../imgs/pierogi4.jpg');
+	background-image: url('../imgs/pierogi4.webp');
 	background-repeat:no-repeat;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -441,7 +441,7 @@ nav {
 #contact {
 	background-color: #444;
 	color: white;
-	background-image: url('../imgs/pierogi2.jpg');
+	background-image: url('../imgs/pierogi2.webp');
 	background-repeat:no-repeat;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
