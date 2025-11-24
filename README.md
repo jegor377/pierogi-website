@@ -1,2 +1,3 @@
-# pierogi-website
-Demo website for testing my webdesign skills.
+# Pierogi website
+
+A pierogi business card website. It was made for fun.
